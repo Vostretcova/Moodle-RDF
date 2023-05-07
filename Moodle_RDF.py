@@ -1,7 +1,7 @@
-from bs4 import BeautifulSoup
-from rdflib import Graph, Namespace, URIRef, Literal
-from rdflib.namespace import RDF, RDFS
-from urllib.parse import quote
+from bs4 import BeautifulSoup #is used to parse the input HTML and extracting information
+from rdflib import Graph, Namespace, URIRef, Literal #is used to create an RDF graph, adding nodes and triples to it, and serializing it
+from rdflib.namespace import RDF, RDFS #same as above
+from urllib.parse import quote #is used to encode URL strings
 
 # OERSchema namespace, here you can define any namespace suitable for you
 OER = Namespace("http://oerschema.org/LearningComponent/")
