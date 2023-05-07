@@ -23,6 +23,7 @@ g = Graph()
 g.bind('oer', OER)
 
 for li in lis:
+    #the main titles for sections are hidden withing 'hidden sectionname' class in html file
     title = li.find('span', class_='hidden sectionname') 
     if title:
         title_text = title.text
@@ -30,6 +31,7 @@ for li in lis:
         title_node = URIRef(OER[quote(title_text.replace(" ", "_"))])
         g.add((title_node, RDF.type, OER.LearningComponent))
         g.add((title_node, RDFS.label, Literal(title_text)))
+        #the subtitles for titles are hidden withing 'instancename' class in html file
         subtitles = li.find_all('span', class_='instancename') 
         if subtitles:
             for subtitle in subtitles:
