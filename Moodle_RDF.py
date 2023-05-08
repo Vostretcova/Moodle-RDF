@@ -44,4 +44,6 @@ for li in lis:
 
 print(g.serialize(format='turtle'))
 
+#in order to have .owl file and see the scheme in Protege 
+g.serialize(destination='output.owl', format='xml')
 
